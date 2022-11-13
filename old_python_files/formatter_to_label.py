@@ -1,8 +1,7 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-from data_loader import read_data, get_VibVol, get_RefVol
-from pre_processing import smooth, too_smooth, tooo_smooth, KMF, normalise, detrend
+from backend_code.data_loader import read_data
+from backend_code.pre_processing import smooth, normalise
 
 # Hitting locations naming convention for the .mat files
 locations = [11, 14, 17, 21, 22, 23, 25, 26, 27, 31, 32, 33, 35, 36, 37, 41, 44,

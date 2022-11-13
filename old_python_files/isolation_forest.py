@@ -1,10 +1,8 @@
 from sklearn.ensemble import IsolationForest
-from data_loader import read_data, get_VibVol, get_RefVol
-from pre_processing import smooth, KMF, normalise, detrend
+from backend_code.data_loader import read_data, get_RefVol
+from backend_code.pre_processing import smooth, normalise
 
 import numpy as np
-import pandas as pd
-import scipy as sc
 import matplotlib.pyplot as plt
 
 emitter = 11

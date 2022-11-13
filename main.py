@@ -1,15 +1,9 @@
 # Imports
-import numpy as np
-import pandas as pd
-import scipy as sc
-import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings('ignore')
 
-from data_loader import * # Functions to read out all data contained in folder raw_data
-from align_waveforms import * # Functions to align waveforms from the same sticker and filter out bad SNR signals
-from pre_processing import * # Filters etc.
-from time_extraction_for_solenoid import * # Finding t_0 for the solenoid
+from backend_code.align_waveforms import * # Functions to align waveforms from the same sticker and filter out bad SNR signals
+from backend_code.time_extraction_for_solenoid import * # Finding t_0 for the solenoid
 
 
 
@@ -22,7 +16,7 @@ def main(list_of_emitting_locations, number_of_stickers, save_results_to_csv = T
          make_plots = make_plots, neglect_low_SNR_signals = neglect_low_SNR_signals, SNR_threshold=SNR_threshold, tp=tp)
 
     if save_results_to_csv == True:
-        export_to_csv(results, "time_differences.csv")
+        export_to_csv(results, "results/time_differences.csv")
 
 
 if __name__ == "__main__":

@@ -1,17 +1,9 @@
 import scipy.io
-import obspy
-import pandas as pd
 import scipy as sc
-import numpy as np
-import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
-from scipy.io.wavfile import write
 from obspy.signal.detrend import spline # spline(array, order=4, dspline=2000, plot=True)
-from data_loader import read_data, get_VibVol, get_RefVol
-from numpy.linalg import norm
-from scipy.fft import rfft, rfftfreq, irfft
+from scipy.fft import rfft, irfft
 from scipy.signal import fftconvolve
-import pywt
 from pylab import *
 
 def KMF(timeseries_array):

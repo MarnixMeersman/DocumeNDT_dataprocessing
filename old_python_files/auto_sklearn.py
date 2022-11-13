@@ -1,21 +1,11 @@
-from data_loader import *
-from pre_processing import *
-from time_extraction_for_solenoid import *
-from sklearn.linear_model import LinearRegression
+from backend_code.time_extraction_for_solenoid import *
 from adtk.transformer import *
-from adtk.detector import InterQuartileRangeAD, ThresholdAD, VolatilityShiftAD, AutoregressionAD
-from adtk.aggregator import AndAggregator
 from adtk.data import validate_series
 from adtk.visualization import plot
-from align_waveforms import get_averaged_aligned_VibVol
-from adtk.pipe import Pipenet
-from adtk.data import to_events
 
 import numpy as np
 import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
-import scipy.io
 
 
 def transformer(signal, show_plot = False):

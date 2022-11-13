@@ -1,14 +1,6 @@
-import numpy as np
-import scipy as sc
-import matplotlib.pyplot as plt
-
-
-import scipy.signal
-
-from scipy.signal import find_peaks, peak_prominences
-from data_loader import *
-from pre_processing import *
-
+from backend_code.pre_processing import *
+from backend_code.data_loader import *
+from backend_code.pre_processing import *
 
 
 

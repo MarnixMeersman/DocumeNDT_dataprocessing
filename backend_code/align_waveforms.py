@@ -5,9 +5,9 @@ import scipy.io
 import pickle
 import pandas as pd
 
-from data_loader import *
-from pre_processing import *
-from time_extraction_for_solenoid import *
+from backend_code.data_loader import *
+from backend_code.pre_processing import *
+from backend_code.time_extraction_for_solenoid import *
 from sklearn.linear_model import LinearRegression
 from adtk.transformer import *
 from adtk.data import *
