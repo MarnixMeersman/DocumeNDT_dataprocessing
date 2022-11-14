@@ -174,11 +174,11 @@ def adjust(btn, e_id, r_id, new_t0, new_t1):
     if "adjust" == ctx.triggered_id:
 
         df_loc["time"] = time
-        df_glob = pd.read_csv("results/time_differences.csv")
+        df_glob = pd.read_csv('./results/time_differences.csv', header=None, delimiter=" ").to_numpy()
         e_loc = locations.index(e_id)
         r_loc = r_id
-        df_glob.iloc[e_loc][r_loc] = dt
-        df_loc.to_pickle('./plots/pickles/' + e + '_' + r + '.pkl')
+        df_glob[e_loc][r_loc] = dt
+        np.savetxt("./results/time_differences.csv", df_glob)
         message = "Saved. \u0394T = " + str(dt) + "[s]"
     else:
         message = " "
