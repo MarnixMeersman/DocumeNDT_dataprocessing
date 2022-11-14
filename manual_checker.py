@@ -192,4 +192,4 @@ def adjust(btn, e_id, r_id, new_t0, new_t1):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
