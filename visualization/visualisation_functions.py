@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import cm
+import array
 
 def NormalizeData(data):
     return (data - np.min(data)) / (np.max(data) - np.min(data))
@@ -53,22 +54,24 @@ def get_line_3d(x0, y0, z0, x1, y1, z1, n):
 
 def get_3d_lines(e_matrix, r_matrix, npoints, v_1D_arr):
     v_1D_arr = NormalizeData(v_1D_arr)
-    coords = []
+    coords = np.array([])
     i = 0
     for e_row in e_matrix:
         for r_row in r_matrix:
-            xs = np.linspace(e_row[0], r_row[0], npoints).ravel()*2.5
-            ys = np.linspace(e_row[1], r_row[1], npoints).ravel()*2.4
-            zs = np.linspace(e_row[2], r_row[2], npoints).ravel()*4 - 0.75
-            vs = np.ones(npoints) * v_1D_arr[i]
+            d = np.sqrt((e_row[0]-r_row[0])**2 + (e_row[1]-r_row[1])**2 + (e_row[2]-r_row[2])**2)
+            xs = np.linspace(e_row[0], r_row[0], int(npoints/d)).ravel()*2.5
+            ys = np.linspace(e_row[1], r_row[1], int(npoints/d)).ravel()*2.4
+            zs = np.linspace(e_row[2], r_row[2], int(npoints/d)).ravel()*4 - 0.75
+            vs = np.ones(int(npoints/d)) * v_1D_arr[i]
             minimatrix = np.array([
                 xs, ys, zs, vs
             ]).T
-            coords.append(minimatrix)
+            coords = np.append(coords, minimatrix)
             i += 1
-    coords = np.reshape(np.array(coords), (-1, 4))
-    # print(coords)
+    # coords = coords.ravel().ravel()
+    coords = np.reshape(coords, (-1, 4))
+    print("Data Size: ", np.shape(coords))
     return coords
 
 # quick_plot_coords(get_coords()[0], get_coords()[1])
-# get_3d_lines(get_coords()[0], get_coords()[1], 1000, get_vel_as_arr())
+# get_3d_lines(get_coords()[0], get_coords()[1], 8000, get_vel_as_arr())
