@@ -9,11 +9,12 @@ Parameters to adjust include:
   - Variance threshold on when to trigger T1
   
  The ouput of main.py updates ./results/time_differences.csv, velocities.csv should be calculated yourself using an excelfile and the known locations of emission and reception. 
- If make_plots = True, you can find the results under ./plots. Careful, this almost doubles the processing time. A short runtime is around 5 minutes. Here a visual overview:
+ If make_plots = True, you can find the results under ./plots. Careful, this almost doubles the processing time. A short runtime is around 5 minutes. Here a visual overview of main.py:
  
 <img width="1512" alt="SCR-20221121-dzt" src="https://user-images.githubusercontent.com/57674797/203034779-757c3c58-5ad0-48df-947e-db9577fdab2b.png">
- ### Manual Checker: manual_checker.py
-To manually check any of the waveforms, use manual_checker.py as shown below. Adjustment to T0 or T1 can be made using the GUI.
+
+### Manual Checker: manual_checker.py
+To manually check any of the waveforms, use manual_checker.py as shown below. Adjustment to T0 or T1 can be made using the GUI. Clicking on the legend allows you to view and hide different tranformations and signals. 
 
 ![ezgif-3 com-gif-maker](https://user-images.githubusercontent.com/57674797/203036614-0ac37bae-9c6e-494c-8c88-1f40d58daa07.gif)
 
