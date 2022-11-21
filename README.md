@@ -24,6 +24,7 @@ In order to visualize your results, go to the ./visualization folder. Make sure 
 !!!In addition for 3d visualizations, please upload a DOWNSAMPLED .obj file for the object. Also, the scaling might be off sometimes, try exporting in mm instead of meters. You can shift and scale the obj file playing with the scaling and shifteing operators for each axis in line 62, 63 and 64 of visualisation_function.py !!!
 ### 3D Slicer Filer: slicer.py
 Allows you to take sections of the interpolated volume using the slicers in X, Y and Z. Button in the top left allows for different color mappings. The histogram represents the distribution over the WHOLE volume. Therefore in doesn't change when playing with the sliders. 
+
 ![ezgif-2 com-gif-maker](https://user-images.githubusercontent.com/57674797/203033455-35437852-9549-4133-be0d-5769828edbd7.gif)
 
 ### 3D Visulation File: mesh_visual.py
