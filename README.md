@@ -15,7 +15,8 @@ Parameters to adjust include:
  
 To manually check any of the waveforms, use manual_checker.py as shown below. Adjustment to T0 or T1 can be made using the GUI.
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/57674797/203011903-475c887e-d0fa-4c18-9d5a-56650cf11c93.gif)
+![ezgif-3 com-gif-maker](https://user-images.githubusercontent.com/57674797/203036614-0ac37bae-9c6e-494c-8c88-1f40d58daa07.gif)
+
 
 In order to visualize your results, go to the ./visualization folder. Make sure that you update your ./visualization/emission_reception_velocities folder since it uses only these values. So UPDATE MANUALLY this folder. Below a video showing how to use the interface:
 
