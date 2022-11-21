@@ -1,4 +1,5 @@
 # DocumeNDT_dataprocessing
+
 ## Quick Start
 First copy this repository to your pc running the following in your python terminal (Python 3.9 recommended)
 ```
@@ -10,10 +11,9 @@ Then install al required libraries using: (if prophet gives you errors, dont wor
 pip install -r requirements.txt
 ```
 
+
 Then proceed with reading this README. Have fun!
 
-
-Then 
 ## Data Processing
 The script requires you to upload matlab ".mat" files into the ./raw_data folder. Make sure the filenames have only a code-number as file name, e.g. "11.mat", as it searches for these particular names while processing.
 The second step is to open main.py and adjust the parameters to your liking, at the top of the file, you should define the locations list which should corresponds to the files you just uploaded. 
