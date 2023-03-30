@@ -51,7 +51,7 @@ It allows your for an interactive way to see side my side the interpolated volum
 ![Screen Recording 2022-11-21 at 11](https://user-images.githubusercontent.com/57674797/203034542-47a0f97e-d631-41d4-b4f2-9e9eb7da2332.gif)
 
 
-## Creative Commons Legal Code
+# Creative Commons Legal Code
 
 CC0 1.0 Universal
 
