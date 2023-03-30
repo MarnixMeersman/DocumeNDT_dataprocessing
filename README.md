@@ -52,4 +52,4 @@ It allows your for an interactive way to see side my side the interpolated volum
 
 
 # License
-DocumeNDT_Controller is available under the CC0 license. See the LICENSE file for more info.
+DocumeNDT_dataprocessing is available under the CC0 license. See the LICENSE file for more info.
